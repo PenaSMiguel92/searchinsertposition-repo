@@ -1,7 +1,11 @@
 public class Solution {
     public int searchInsert(int[] nums, int target) {
-        if (nums.length <= 1)
-            return 1;
+        if (nums.length <= 1) {
+            if (target <= nums[0])
+                return 0;
+            else 
+                return 1;
+        }
         int middleIndex = nums.length / 2;
         if (target == nums[middleIndex])
             return middleIndex;
